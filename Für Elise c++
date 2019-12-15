@@ -1,0 +1,74 @@
+#include<iostream>
+#include<windows.h>
+#include<string.h>
+
+using namespace std;
+
+void play_note(char a[])
+{
+	if(strcmp(a,"e5")==0)
+			{ Beep(659,500); }
+		else if(strcmp(a,"ds")==0)
+			{ Beep(622,400); }
+		else if(strcmp(a,"b4")==0)
+			{ Beep(493,500); }
+		else if(strcmp(a,"d5")==0)
+			{ Beep(587,500); }
+		else if(strcmp(a,"c5")==0)
+			{ Beep(523,500); }
+		else if(strcmp(a,"a4")==0)
+			{ Beep(440,500); } 
+		else if(strcmp(a,"c4")==0)
+			{ Beep(261,500); }
+		else if(strcmp(a,"e4")==0)
+			{ Beep(329,500); }
+		else if(strcmp(a,"b3")==0)
+			{ Beep(246,500); }
+		else if(strcmp(a,"a3")==0)
+			{ Beep(220,500); }
+		else if(strcmp(a,"a5")==0)
+			{ Beep(880,500); }	
+		else if(strcmp(a,"b5")==0)
+			{ Beep(987,500); }
+		else if(strcmp(a,"c6")==0)
+			{ Beep(1046,500); }
+		else if(strcmp(a,"d6")==0)
+			{ Beep(1174,500); }
+		else if(strcmp(a,"e6")==0)
+			{ Beep(1318,500); }
+		else if(strcmp(a,"g6")==0)
+			{ Beep(1567,500); }
+		else if(strcmp(a,"f6")==0)
+			{ Beep(1396,500); }	
+}
+
+
+int main()
+{
+	char *a[]={"e5","ds","e5","ds","e5","b4","d5","c5","a4","c4","e4","a4","b4","e4","a4","b4","c5","\0"};
+	char *b[]={"e5","ds","e5","ds","e5","b4","d5","c5","a4","c4","e4","a4","b4","e4","c5","b4","a4","\0"};
+	char *c[]={"c5","e5","a5","b5","e5","a5","b5","c6","b5","c6","d6","e6","g6","f6","e6","d6","e6","e6","d6","c6","e6","d6","c6","b5","\0"};
+	for(int i=0;a[i]!="\0";i++)
+	{
+		play_note(a[i]);	
+	}
+	for(int i=0;b[i]!="\0";i++)
+	{
+		play_note(b[i]);		
+	}
+	Beep(0,300);
+	for(int i=0;c[i]!="\0";i++)
+	{
+		play_note(c[i]);
+	}
+	Beep(0,300);
+	for(int i=0;a[i]!="\0";i++)
+	{
+		play_note(a[i]);	
+	}
+	for(int i=0;b[i]!="\0";i++)
+	{
+		play_note(b[i]);		
+	}
+	return 0;
+}
