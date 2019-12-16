@@ -6,7 +6,7 @@ using namespace std;
 
 void play_note(char a[])
 {
-	if(strcmp(a,"e5")==0)
+		if(strcmp(a,"e5")==0)
 			{ Beep(659,500); }
 		else if(strcmp(a,"ds")==0)
 			{ Beep(622,400); }
